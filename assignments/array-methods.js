@@ -87,7 +87,9 @@ console.log(largeShirts);
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
 let ticketPriceTotal = [];
 
-    ticketPriceTotal = runners.reduce
+    ticketPriceTotal = runners.reduce((acc, cur) => {
+        return acc += cur.donation;
+    }, 0)
 
 console.log(ticketPriceTotal);
 
@@ -96,6 +98,29 @@ console.log(ticketPriceTotal);
 
 // Problem 1
 
+let LargeDonors = []
+
+    LargeDonors = runners.filter(function(firstName){
+        return firstName.donation >= 100;
+    })
+console.log (LargeDonors);
+
 // Problem 2
 
+let DonationsRank = []
+    
+    DonationsRank = runners.map(function(arrayItem){
+        return (`${arrayItem.donation}, ${arrayItem.first_name}, ${arrayItem.last_name}`)
+    })
+
+console.log(DonationsRank);
+
 // Problem 3
+
+let emailList = []
+
+    emailList = runners.map(function(arrayItem){
+        return (`${arrayItem.email}`);
+    })
+
+console.log(emailList);

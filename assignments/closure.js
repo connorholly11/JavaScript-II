@@ -9,6 +9,11 @@ const World = "I am the world"
     
     function neighborhood(){
       console.log("I'm in my neighborhood")
+
+      function house(){
+        console.log("I am in my house")
+      }//closes house
+      return house;
     }//closes neighborhood
 
     return neighborhood;
@@ -19,9 +24,13 @@ const World = "I am the world"
 
   kingdom();
 
-  let Myneighborhood = neighborhood();
+  let Myneighborhood = kingdom();
 
   Myneighborhood();
+
+  let MyHouse = Myneighborhood();
+
+  MyHouse();
 
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */

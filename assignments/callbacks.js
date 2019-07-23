@@ -72,10 +72,21 @@ multiplyNums(2, 5, function(multiply){
   console.log(multiply);
 });
 
+//------------------------------
+
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  return cb(list.indexOf(item) >= 0);
 }
+
+contains('Pencil', items, function(abc){
+  console.log(abc);
+});
+
+
+
+
 
 /* STRETCH PROBLEM */
 

@@ -1,6 +1,28 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+const World = "I am the world"
+
+  function kingdom(){
+    const king = "me";
+    console.log("Hey I am the king")
+    
+    function neighborhood(){
+      console.log("I'm in my neighborhood")
+    }//closes neighborhood
+
+    return neighborhood;
+
+  }//closes kingdom
+
+  console.log (World);
+
+  kingdom();
+
+  let Myneighborhood = neighborhood();
+
+  Myneighborhood();
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 

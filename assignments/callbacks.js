@@ -94,4 +94,12 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+
+  cb(array.filter(function(item, index){
+    return array.indexOf(item) >= index;
+  }));
 }
+
+removeDuplicates(items, function (asdf){
+  console.log(asdf)
+});
